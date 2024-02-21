@@ -25,13 +25,6 @@ void matrix::random() {
 	}
 }
 
-//matrix & matrix::operator = (const matrix& object) {
-//	this->m = object.m;
-//	this->n = object.n;
-//	if (this->data != nullptr) delete[] this->data;
-//
-//}
-
 std::ostream& operator <<(std::ostream& os, const matrix& mat) {
     for (unsigned int i = 0; i < mat.m; ++i) {
         for (unsigned int j = 0; j < mat.n; ++j) {
