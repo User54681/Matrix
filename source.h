@@ -1,6 +1,7 @@
 #pragma once
 #ifndef source
 #define source
+#include <iostream>
 
 class matrix {
 private:
@@ -10,6 +11,7 @@ public:
 	matrix();
 	matrix(unsigned int m, unsigned int n);
 	~matrix();
+	int* operator[](unsigned int index);
 	void random();
 	friend std::ostream& operator <<(std::ostream& os, const matrix& mat);
 	matrix operator+(const matrix& other);

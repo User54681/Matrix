@@ -1,6 +1,5 @@
 #include "source.h"
 #include <ctime>
-#include <iostream>
 
 matrix::matrix() {
 	m = 3;
@@ -16,6 +15,10 @@ matrix::~matrix() {
 	delete data;
 }
 
+int* matrix::operator[](unsigned int index) {
+    return data[index];
+}
+
 void matrix::random() {
 	srand(time(0));
 	for (int i = 0; i < m; ++i) {
@@ -25,12 +28,12 @@ void matrix::random() {
 	}
 }
 
-std::ostream& operator <<(std::ostream& os, const matrix& mat) {
+std::ostream& operator<<(std::ostream& os, const matrix& mat) {
     for (unsigned int i = 0; i < mat.m; ++i) {
         for (unsigned int j = 0; j < mat.n; ++j) {
             os << mat.data[i][j] << " ";
         }
-        os << std::endl;
+        os << "\n";
     }
     return os;
 }
