@@ -6,12 +6,11 @@
 class matrix {
 private:
 	int** data;
-	unsigned int m, n; //m - rows, n - columns
+	 int m, n; //m - rows, n - columns
 public:
 	matrix();
-	matrix(unsigned int m, unsigned int n);
+	matrix( int m,  int n);
 	~matrix();
-	int* operator[](unsigned int index);
 	void random();
 	friend std::ostream& operator <<(std::ostream& os, const matrix& mat);
 	matrix operator+(const matrix& other);
@@ -24,3 +23,4 @@ public:
 };
 
 #endif // !source
+#pragma once
