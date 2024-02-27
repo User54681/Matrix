@@ -6,10 +6,10 @@
 class matrix {
 private:
 	int** data;
-	 int m, n; //m - rows, n - columns
+	unsigned int m, n; //m - rows, n - columns
 public:
 	matrix();
-	matrix( int m,  int n);
+	matrix(unsigned int m, unsigned int n);
 	~matrix();
 	void random();
 	friend std::ostream& operator <<(std::ostream& os, const matrix& mat);

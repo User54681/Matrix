@@ -4,6 +4,8 @@
 matrix::matrix() {
 	m = 3;
 	n = 3;
+    data = new int* [m];
+    for (int i = 0; i < m; ++i) data[i] = new int[n];
 }
 
 matrix::matrix(unsigned int m, unsigned int n) {
